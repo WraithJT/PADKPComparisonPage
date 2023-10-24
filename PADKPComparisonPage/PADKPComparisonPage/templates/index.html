@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="POST"
+      action=" {{ url_for('compare') }} "
+      enctype="multipart/form-data"
+      onsubmit="return compare()">
+    <script language="JavaScript">
+        function selectall() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+            }
+        }
+        function uncheck() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+        }
+        function compare() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var search = [];
+            var count = 0;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    search[count] = checkboxes[i].id;
+                    count++;
+                }
+            }
+            return search;
+        }
+    </script>
+
+    <div class="jumbotron">
+        <h1>PA DKP Comparator</h1>
+        <p class="lead">Use this page to select PA members to compare for loot assignment</p>
+    </div>
+
+    <div style="text-align:center">
+        <button type="button" onclick="uncheck()">Clear</button>
+        <button type="button" onClick="selectall()">Select All</button>
+        <button type="submit">Submit</button>
+    </div>
+    <br />
+
+    {{ characters|safe }}
+    {% endblock %}
+</form>
