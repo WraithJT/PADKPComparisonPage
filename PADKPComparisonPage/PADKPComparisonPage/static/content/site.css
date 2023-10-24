@@ -1,6 +1,38 @@
+/* canvas {
+    --bg-color: rgba(37,48,59, 1);
+    --text-color: rgba(94,155,208, 1);
+    --text-soft-color: rgba(85,141,189, 1);
+    --text-strong-color: rgba(150,191,234, 1);
+    --subtle-color: rgba(34,44,54, 1);
+    --border-color: rgba(62,81,100, 1);
+    --shadow-color: rgba(0,0,0, 1);
+    --input-color: rgba(32,32,32, 1);
+    --outline-color: rgba(218,140,95, 1);
+    --mark-color: rgba(207,132,90, 0.08);
+    --special-color: rgba(207,132,90, 1);
+    --special-bg-color: rgba(138,86,57, 1);
+    --special-text-color: rgba(229,222,219, 1);
+    --special-shadow-color: rgba(40,28,22, 1);
+    --special-mark-color: rgba(229,222,219, 0.08);
+    --light-color: rgba(241,204,190, 1);
+    --dark-color: rgba(67,49,41, 1);
+    --text-color-rgb: 94,155,208;
+    --bg-color-rgb: 37,48,59;
+    --subtle-color-rgb: 34,44,54;
+    --special-color-rgb: 207,132,90;
+    --special-text-color-rgb: 229,222,219;
+    --special-bg-color-rgb: 138,86,57;
+    --shadow-color-rgb: 0,0,0;
+    --special-shadow-color-rgb: 40,28,22;
+    --outline-color-rgb: 218,140,95;
+    --dark-color-rgb: 67,49,41;
+    --light-color-rgb: 241,204,190;
+} */
+
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,6 +53,10 @@ textarea {
     color: #b94a48;
 }
 
+.validation-summary-errors {
+    color: #b94a48;
+}
+
 .field-validation-valid {
     display: none;
 }
@@ -31,10 +67,6 @@ input.input-validation-error {
 
 input[type="checkbox"].input-validation-error {
     border: 0 none;
-}
-
-.validation-summary-errors {
-    color: #b94a48;
 }
 
 .validation-summary-valid {
