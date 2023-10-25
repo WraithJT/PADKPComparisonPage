@@ -65,8 +65,6 @@
     <Content Include="PADKPComparisonPage\static\scripts\respond.js" />
     <Content Include="PADKPComparisonPage\static\scripts\respond.min.js" />
     <Content Include="PADKPComparisonPage\static\scripts\_references.js" />
-    <Content Include="PADKPComparisonPage\templates\about.html" />
-    <Content Include="PADKPComparisonPage\templates\contact.html" />
     <Content Include="PADKPComparisonPage\templates\index.html" />
     <Content Include="PADKPComparisonPage\templates\layout.html" />
   </ItemGroup>
